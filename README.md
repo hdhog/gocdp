@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/hdhog/gocdp.svg?branch=master)](https://travis-ci.org/hdhog/gocdp)
+
 # GoCDP
 
 Show CDP by snmp
