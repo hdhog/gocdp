@@ -24,9 +24,8 @@ const (
 	cacheDevicePort       = 7
 )
 
-// Информация о версии приложения
 var (
-	Version = "0.0.1"
+	version = "0.0.1"
 )
 
 type cdpNeighbor struct {
@@ -182,7 +181,7 @@ func main() {
 	app := cli.NewApp()
 	app.Name = "gocdp"
 	app.Usage = "show CDP by snmp"
-	app.Version = Version
+	app.Version = version
 	app.Authors = []cli.Author{
 		cli.Author{
 			Name:  "hdhog",
