@@ -1,6 +1,6 @@
 # GoCDP
 
-Show CDP over snmp
+Show CDP by snmp
 
 Example run:
 
