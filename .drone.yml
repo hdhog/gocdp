@@ -1,0 +1,15 @@
+workspace:
+  base: /go
+pipeline:
+  build:
+      image: golang:${GO_VERSION}    
+      commands:
+        - go get -v
+        - go test -v
+        - go build -v
+matrix:
+  GO_VERSION:    
+    - 1.7
+  GO_ARCH:
+    - amd64
+    - 386
