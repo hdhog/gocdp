@@ -76,16 +76,16 @@ func getCDPNeighbors(host, community string) (map[string]cdpNeighbor, error) {
 		return nil, err
 	}
 
+	if err = snmp.Open(); err != nil {
+		return nil, err
+	}
+	defer snmp.Close()
+
 	cacheEntry, err := prepareOids()
 
 	if err != nil {
 		return nil, err
 	}
-
-	if err = snmp.Open(); err != nil {
-		return nil, err
-	}
-	defer snmp.Close()
 
 	pdu, err := snmp.GetBulkWalk(cacheEntry, 0, 10)
 	if err != nil {
